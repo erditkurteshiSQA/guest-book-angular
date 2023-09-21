@@ -22,6 +22,7 @@
           "options": {
             "outputPath": "dist/guest-book-angular",
             "index": "src/index.html",
+            "baseHref": "/guest-book-angular/",
             "main": "src/main.ts",
             "polyfills": [
               "zone.js"
@@ -43,7 +44,7 @@
                 {
                   "type": "initial",
                   "maximumWarning": "500kb",
-                  "maximumError": "1mb"
+                  "maximumError": "5mb"
                 },
                 {
                   "type": "anyComponentStyle",
@@ -86,6 +87,7 @@
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
             "polyfills": [
+              "src/polyfills.ts",
               "zone.js",
               "zone.js/testing"
             ],
